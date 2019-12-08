@@ -1,5 +1,6 @@
-#+title: Introduction to Systematic Reviews in International Development, Mannheim, Germany | December 11th-12th, 2019
-#+author: Bernd Weiß
+# Introduction to Systematic Reviews in International Development, Mannheim, Germany | December 11th-12th, 2019
+
+# [Bernd Weiß, GESIS Leibniz Institut for the Social Sciences](https://www.gesis.org/person/bernd.weiss)
 
 To start the exercises and the Jupyter notebooks, push the "launch binder" button. It hopefully takes only about 30 seconds to start the notebook. Then open the folder `/notebooks`.
 
