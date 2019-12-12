@@ -13106,13 +13106,40 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">source</span><span class="p">(</span><span class="s">&quot;run_me_first.R&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>Loading required package: Matrix
+Loading &#39;metafor&#39; package (version 2.1-0). For an overview 
+and introduction to the package please type: help(metafor).
+
+Attaching package: &#39;metafor&#39;
+
+The following object is masked from &#39;package:car&#39;:
+
+    vif
+
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -13143,7 +13170,7 @@ heterogeneity.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## Solution.</span>
@@ -13177,16 +13204,16 @@ tau (square root of estimated tau^2 value):      0.5597
 I^2 (total heterogeneity / total variability):   92.22%
 H^2 (total variability / sampling variability):  12.86
 
-Test for Heterogeneity: 
+Test for Heterogeneity:
 Q(df = 12) = 152.2330, p-val &lt; .0001
 
 Model Results:
 
-estimate      se     zval    pval    ci.lb    ci.ub     
- -0.7145  0.1798  -3.9744  &lt;.0001  -1.0669  -0.3622  ***
+estimate      se     zval    pval    ci.lb    ci.ub 
+ -0.7145  0.1798  -3.9744  &lt;.0001  -1.0669  -0.3622  *** 
 
 ---
-Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1 
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 </pre>
 </div>
 
@@ -13207,7 +13234,7 @@ Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>In a next step we are wondering if the moderator variable <code>ablat</code> can explain heterogeneity in the effect size
-distribution. <code>ablat</code> denotes the absolute <a href="https://en.wikipedia.org/wiki/Geographic_coordinate_system">latitude</a> (Wikipedia article). The effect of latitude on the vaccine can be assumed as follows:</p>
+distribution. <code>ablat</code> denotes the <strong>absolute</strong> <a href="https://en.wikipedia.org/wiki/Geographic_coordinate_system">latitude</a> (Wikipedia article). The effect of latitude on the vaccine can be assumed as follows:</p>
 <blockquote><p>"Latitude accounts for variation in rainfall, humidity, environmental mycobacteria that may produce natural immunity, temperature, and other factors that may have biological implications for vaccine efficacy. Preparation of the live vaccine requires refrigeration; unrefrigerated, it would spoil more quickly in warmer temperatures. Furthermore, direct
 exposure of the vaccine to sunlight may reduce counts of live bacteria" (Berkey et al. 1995: 396).</p>
 </blockquote>
@@ -13221,7 +13248,7 @@ interpretation.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## Solution.</span>
@@ -13259,20 +13286,20 @@ I^2 (residual heterogeneity / unaccounted variability): 68.39%
 H^2 (unaccounted variability / sampling variability):   3.16
 R^2 (amount of heterogeneity accounted for):            75.62%
 
-Test for Residual Heterogeneity: 
+Test for Residual Heterogeneity:
 QE(df = 11) = 30.733, p-val = 0.001
 
-Test of Moderators (coefficient(s) 2): 
+Test of Moderators (coefficient 2):
 QM(df = 1) = 16.357, p-val &lt; .001
 
 Model Results:
 
-         estimate     se    zval   pval   ci.lb   ci.ub     
-intrcpt     0.251  0.249   1.009  0.313  -0.237   0.740     
-ablat      -0.029  0.007  -4.044  &lt;.001  -0.043  -0.015  ***
+         estimate     se    zval   pval   ci.lb   ci.ub 
+intrcpt     0.251  0.249   1.009  0.313  -0.237   0.740      
+ablat      -0.029  0.007  -4.044  &lt;.001  -0.043  -0.015  *** 
 
 ---
-Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1 
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 </pre>
 </div>
 
@@ -13286,21 +13313,25 @@ Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&
 
 <div class="output_html rendered_html output_subarea ">
 <table>
-<thead><tr><th scope=col>trial</th><th scope=col>author</th><th scope=col>year</th><th scope=col>tpos</th><th scope=col>tneg</th><th scope=col>cpos</th><th scope=col>cneg</th><th scope=col>ablat</th><th scope=col>alloc</th><th scope=col>yi</th><th scope=col>vi</th><th scope=col>ablat_gr</th><th scope=col>ablat_gr2</th></tr></thead>
+<caption>A escalc: 13 × 11</caption>
+<thead>
+	<tr><th scope=col>trial</th><th scope=col>author</th><th scope=col>year</th><th scope=col>tpos</th><th scope=col>tneg</th><th scope=col>cpos</th><th scope=col>cneg</th><th scope=col>ablat</th><th scope=col>alloc</th><th scope=col>yi</th><th scope=col>vi</th></tr>
+	<tr><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
 <tbody>
-	<tr><td> 1                  </td><td>Aronson             </td><td>1948                </td><td>  4                 </td><td>  119               </td><td> 11                 </td><td>  128               </td><td>44                  </td><td>random              </td><td>-0.88931133         </td><td>0.325584765         </td><td>[34,90)             </td><td>[34,90)             </td></tr>
-	<tr><td> 2                                                              </td><td><span style=white-space:pre-wrap>Ferguson &amp; Simes    </span></td><td>1949                                                            </td><td><span style=white-space:pre-wrap>  6</span>                     </td><td><span style=white-space:pre-wrap>  300</span>                   </td><td> 29                                                             </td><td><span style=white-space:pre-wrap>  274</span>                   </td><td>55                                                              </td><td><span style=white-space:pre-wrap>random    </span>              </td><td>-1.58538866                                                     </td><td>0.194581121                                                     </td><td>[34,90)                                                         </td><td>[34,90)                                                         </td></tr>
-	<tr><td> 3                  </td><td>Rosenthal et al     </td><td>1960                </td><td>  3                 </td><td>  228               </td><td> 11                 </td><td>  209               </td><td>42                  </td><td>random              </td><td>-1.34807315         </td><td>0.415367965         </td><td>[34,90)             </td><td>[34,90)             </td></tr>
-	<tr><td> 4                                                              </td><td><span style=white-space:pre-wrap>Hart &amp; Sutherland   </span></td><td>1977                                                            </td><td> 62                                                             </td><td>13536                                                           </td><td>248                                                             </td><td>12619                                                           </td><td>52                                                              </td><td><span style=white-space:pre-wrap>random    </span>              </td><td>-1.44155119                                                     </td><td>0.020010032                                                     </td><td>[34,90)                                                         </td><td>[34,90)                                                         </td></tr>
-	<tr><td> 5                  </td><td>Frimodt-Moller et al</td><td>1973                </td><td> 33                 </td><td> 5036               </td><td> 47                 </td><td> 5761               </td><td>13                  </td><td>alternate           </td><td>-0.21754732         </td><td>0.051210172         </td><td>[0,34)              </td><td>[0,34)              </td></tr>
-	<tr><td> 6                                                              </td><td><span style=white-space:pre-wrap>Stein &amp; Aronson     </span></td><td>1953                                                            </td><td>180                                                             </td><td> 1361                                                           </td><td>372                                                             </td><td> 1079                                                           </td><td>44                                                              </td><td>alternate                                                       </td><td>-0.78611559                                                     </td><td>0.006905618                                                     </td><td>[34,90)                                                         </td><td>[34,90)                                                         </td></tr>
-	<tr><td> 7                  </td><td>Vandiviere et al    </td><td>1973                </td><td>  8                 </td><td> 2537               </td><td> 10                 </td><td>  619               </td><td>19                  </td><td>random              </td><td>-1.62089822         </td><td>0.223017248         </td><td>[0,34)              </td><td>[0,34)              </td></tr>
-	<tr><td> 8                  </td><td>TPT Madras          </td><td>1980                </td><td>505                 </td><td>87886               </td><td>499                 </td><td>87892               </td><td>13                  </td><td>random              </td><td> 0.01195233         </td><td>0.003961579         </td><td>[0,34)              </td><td>[0,34)              </td></tr>
-	<tr><td> 9                                                              </td><td><span style=white-space:pre-wrap>Coetzee &amp; Berjak    </span></td><td>1968                                                            </td><td> 29                                                             </td><td> 7470                                                           </td><td> 45                                                             </td><td> 7232                                                           </td><td>27                                                              </td><td><span style=white-space:pre-wrap>random    </span>              </td><td>-0.46941765                                                     </td><td>0.056434210                                                     </td><td>[0,34)                                                          </td><td>[0,34)                                                          </td></tr>
-	<tr><td>10                  </td><td>Rosenthal et al     </td><td>1961                </td><td> 17                 </td><td> 1699               </td><td> 65                 </td><td> 1600               </td><td>42                  </td><td>systematic          </td><td>-1.37134480         </td><td>0.073024794         </td><td>[34,90)             </td><td>[34,90)             </td></tr>
-	<tr><td>11                  </td><td>Comstock et al      </td><td>1974                </td><td>186                 </td><td>50448               </td><td>141                 </td><td>27197               </td><td>18                  </td><td>systematic          </td><td>-0.33935883         </td><td>0.012412214         </td><td>[0,34)              </td><td>[0,34)              </td></tr>
-	<tr><td>12                                                              </td><td><span style=white-space:pre-wrap>Comstock &amp; Webster  </span></td><td>1969                                                            </td><td><span style=white-space:pre-wrap>  5</span>                     </td><td> 2493                                                           </td><td><span style=white-space:pre-wrap>  3</span>                     </td><td> 2338                                                           </td><td>33                                                              </td><td>systematic                                                      </td><td> 0.44591340                                                     </td><td>0.532505845                                                     </td><td>[0,34)                                                          </td><td>[0,34)                                                          </td></tr>
-	<tr><td>13                  </td><td>Comstock et al      </td><td>1976                </td><td> 27                 </td><td>16886               </td><td> 29                 </td><td>17825               </td><td>33                  </td><td>systematic          </td><td>-0.01731395         </td><td>0.071404660         </td><td>[0,34)              </td><td>[0,34)              </td></tr>
+	<tr><td> 1</td><td>Aronson             </td><td>1948</td><td>  4</td><td>  119</td><td> 11</td><td>  128</td><td>44</td><td>random    </td><td>-0.88931133</td><td>0.325584765</td></tr>
+	<tr><td> 2</td><td><span style=white-space:pre-wrap>Ferguson &amp; Simes    </span></td><td>1949</td><td><span style=white-space:pre-wrap>  6</span></td><td><span style=white-space:pre-wrap>  300</span></td><td> 29</td><td><span style=white-space:pre-wrap>  274</span></td><td>55</td><td><span style=white-space:pre-wrap>random    </span></td><td>-1.58538866</td><td>0.194581121</td></tr>
+	<tr><td> 3</td><td>Rosenthal et al     </td><td>1960</td><td>  3</td><td>  228</td><td> 11</td><td>  209</td><td>42</td><td>random    </td><td>-1.34807315</td><td>0.415367965</td></tr>
+	<tr><td> 4</td><td><span style=white-space:pre-wrap>Hart &amp; Sutherland   </span></td><td>1977</td><td> 62</td><td>13536</td><td>248</td><td>12619</td><td>52</td><td><span style=white-space:pre-wrap>random    </span></td><td>-1.44155119</td><td>0.020010032</td></tr>
+	<tr><td> 5</td><td>Frimodt-Moller et al</td><td>1973</td><td> 33</td><td> 5036</td><td> 47</td><td> 5761</td><td>13</td><td>alternate </td><td>-0.21754732</td><td>0.051210172</td></tr>
+	<tr><td> 6</td><td><span style=white-space:pre-wrap>Stein &amp; Aronson     </span></td><td>1953</td><td>180</td><td> 1361</td><td>372</td><td> 1079</td><td>44</td><td>alternate </td><td>-0.78611559</td><td>0.006905618</td></tr>
+	<tr><td> 7</td><td>Vandiviere et al    </td><td>1973</td><td>  8</td><td> 2537</td><td> 10</td><td>  619</td><td>19</td><td>random    </td><td>-1.62089822</td><td>0.223017248</td></tr>
+	<tr><td> 8</td><td>TPT Madras          </td><td>1980</td><td>505</td><td>87886</td><td>499</td><td>87892</td><td>13</td><td>random    </td><td> 0.01195233</td><td>0.003961579</td></tr>
+	<tr><td> 9</td><td><span style=white-space:pre-wrap>Coetzee &amp; Berjak    </span></td><td>1968</td><td> 29</td><td> 7470</td><td> 45</td><td> 7232</td><td>27</td><td><span style=white-space:pre-wrap>random    </span></td><td>-0.46941765</td><td>0.056434210</td></tr>
+	<tr><td>10</td><td>Rosenthal et al     </td><td>1961</td><td> 17</td><td> 1699</td><td> 65</td><td> 1600</td><td>42</td><td>systematic</td><td>-1.37134480</td><td>0.073024794</td></tr>
+	<tr><td>11</td><td>Comstock et al      </td><td>1974</td><td>186</td><td>50448</td><td>141</td><td>27197</td><td>18</td><td>systematic</td><td>-0.33935883</td><td>0.012412214</td></tr>
+	<tr><td>12</td><td><span style=white-space:pre-wrap>Comstock &amp; Webster  </span></td><td>1969</td><td><span style=white-space:pre-wrap>  5</span></td><td> 2493</td><td><span style=white-space:pre-wrap>  3</span></td><td> 2338</td><td>33</td><td>systematic</td><td> 0.44591340</td><td>0.532505845</td></tr>
+	<tr><td>13</td><td>Comstock et al      </td><td>1976</td><td> 27</td><td>16886</td><td> 29</td><td>17825</td><td>33</td><td>systematic</td><td>-0.01731395</td><td>0.071404660</td></tr>
 </tbody>
 </table>
 
@@ -14015,7 +14046,7 @@ AElFTkSuQmCC"
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## Solution.</span>
@@ -14031,7 +14062,7 @@ AElFTkSuQmCC"
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## Solution.</span>
@@ -14085,7 +14116,7 @@ ablat_gr. Note that we need to define a predictor as a <code>factor</code> varia
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">table</span><span class="p">(</span><span class="n">dat.bcg</span><span class="o">$</span><span class="n">ablat</span><span class="p">)</span>
@@ -14120,11 +14151,11 @@ ablat_gr. Note that we need to define a predictor as a <code>factor</code> varia
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">car</span><span class="p">)</span>
-<span class="n">dat.bcg</span><span class="o">$</span><span class="n">ablat_gr</span> <span class="o">&lt;-</span> <span class="nf">recode</span><span class="p">(</span><span class="n">dat.bcg</span><span class="o">$</span><span class="n">ablat</span><span class="p">,</span> <span class="s">&quot;0:33 = &#39;[0,34)&#39;; 24:90 = &#39;[34,90)&#39;&quot;</span><span class="p">)</span>
+<span class="n">dat.bcg</span><span class="o">$</span><span class="n">ablat_gr</span> <span class="o">&lt;-</span> <span class="nf">recode</span><span class="p">(</span><span class="n">dat.bcg</span><span class="o">$</span><span class="n">ablat</span><span class="p">,</span> <span class="s">&quot;0:33 = &#39;[0,34)&#39;; 34:90 = &#39;[34,90)&#39;&quot;</span><span class="p">)</span>
 <span class="n">dat.bcg</span><span class="o">$</span><span class="n">ablat_gr</span> <span class="o">&lt;-</span> <span class="nf">factor</span><span class="p">(</span><span class="n">dat.bcg</span><span class="o">$</span><span class="n">ablat_gr</span><span class="p">)</span>
 <span class="nf">table</span><span class="p">(</span><span class="n">dat.bcg</span><span class="o">$</span><span class="n">ablat_gr</span><span class="p">)</span>
 </pre></div>
@@ -14176,7 +14207,7 @@ ablat_gr. Note that we need to define a predictor as a <code>factor</code> varia
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## Solution.</span>
@@ -14203,8 +14234,8 @@ ablat_gr. Note that we need to define a predictor as a <code>factor</code> varia
 <pre>
 Mixed-Effects Model (k = 13; tau^2 estimator: REML)
 
-  logLik  deviance       AIC       BIC      AICc  
-  -7.073    14.146    20.146    21.339    23.574  
+  logLik  deviance       AIC       BIC      AICc 
+  -7.073    14.146    20.146    21.339    23.574   
 
 tau^2 (estimated amount of residual heterogeneity):     0.084 (SE = 0.063)
 tau (square root of estimated tau^2 value):             0.289
@@ -14212,20 +14243,20 @@ I^2 (residual heterogeneity / unaccounted variability): 70.82%
 H^2 (unaccounted variability / sampling variability):   3.43
 R^2 (amount of heterogeneity accounted for):            73.31%
 
-Test for Residual Heterogeneity: 
+Test for Residual Heterogeneity:
 QE(df = 11) = 41.789, p-val &lt; .001
 
-Test of Moderators (coefficient(s) 2): 
+Test of Moderators (coefficient 2):
 QM(df = 1) = 17.145, p-val &lt; .001
 
 Model Results:
 
-                 estimate     se    zval   pval   ci.lb   ci.ub     
-intrcpt            -0.273  0.145  -1.887  0.059  -0.557   0.011    .
-ablat_gr[34,90)    -0.920  0.222  -4.141  &lt;.001  -1.356  -0.485  ***
+                 estimate     se    zval   pval   ci.lb   ci.ub 
+intrcpt            -0.273  0.145  -1.887  0.059  -0.557   0.011    . 
+ablat_gr[34,90)    -0.920  0.222  -4.141  &lt;.001  -1.356  -0.485  *** 
 
 ---
-Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1 
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 </pre>
 </div>
 
@@ -14245,7 +14276,7 @@ Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">mdl_grouped</span> <span class="o">&lt;-</span> <span class="nf">rma</span><span class="p">(</span><span class="n">yi</span> <span class="o">~</span> <span class="nf">relevel</span><span class="p">(</span><span class="n">ablat_gr</span><span class="p">,</span> <span class="n">ref</span> <span class="o">=</span> <span class="s">&quot;[34,90)&quot;</span><span class="p">),</span> <span class="n">vi</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">dat.bcg</span><span class="p">,</span> <span class="n">digits</span> <span class="o">=</span> <span class="m">3</span><span class="p">)</span>
@@ -14271,8 +14302,8 @@ Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&
 <pre>
 Mixed-Effects Model (k = 13; tau^2 estimator: REML)
 
-  logLik  deviance       AIC       BIC      AICc  
-  -7.073    14.146    20.146    21.339    23.574  
+  logLik  deviance       AIC       BIC      AICc 
+  -7.073    14.146    20.146    21.339    23.574   
 
 tau^2 (estimated amount of residual heterogeneity):     0.084 (SE = 0.063)
 tau (square root of estimated tau^2 value):             0.289
@@ -14280,23 +14311,23 @@ I^2 (residual heterogeneity / unaccounted variability): 70.82%
 H^2 (unaccounted variability / sampling variability):   3.43
 R^2 (amount of heterogeneity accounted for):            73.31%
 
-Test for Residual Heterogeneity: 
+Test for Residual Heterogeneity:
 QE(df = 11) = 41.789, p-val &lt; .001
 
-Test of Moderators (coefficient(s) 2): 
+Test of Moderators (coefficient 2):
 QM(df = 1) = 17.145, p-val &lt; .001
 
 Model Results:
 
-                                          estimate     se    zval   pval
-intrcpt                                     -1.194  0.169  -7.075  &lt;.001
-relevel(ablat_gr, ref = &#34;[34,90)&#34;)[0,34)     0.920  0.222   4.141  &lt;.001
-                                           ci.lb   ci.ub     
-intrcpt                                   -1.524  -0.863  ***
-relevel(ablat_gr, ref = &#34;[34,90)&#34;)[0,34)   0.485   1.356  ***
+                                          estimate     se    zval   pval 
+intrcpt                                     -1.194  0.169  -7.075  &lt;.001 
+relevel(ablat_gr, ref = &#34;[34,90)&#34;)[0,34)     0.920  0.222   4.141  &lt;.001 
+                                           ci.lb   ci.ub 
+intrcpt                                   -1.524  -0.863  *** 
+relevel(ablat_gr, ref = &#34;[34,90)&#34;)[0,34)   0.485   1.356  *** 
 
 ---
-Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1 
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 </pre>
 </div>
 
@@ -14316,7 +14347,7 @@ Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">dat.bcg</span><span class="o">$</span><span class="n">ablat_gr2</span> <span class="o">&lt;-</span> <span class="nf">relevel</span><span class="p">(</span><span class="n">dat.bcg</span><span class="o">$</span><span class="n">ablat_gr</span><span class="p">,</span> <span class="n">ref</span> <span class="o">=</span> <span class="s">&quot;[34,90)&quot;</span><span class="p">)</span>
@@ -14339,14 +14370,18 @@ Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&
 
 <div class="output_html rendered_html output_subarea ">
 <table>
-<thead><tr><th scope=col>trial</th><th scope=col>author</th><th scope=col>year</th><th scope=col>tpos</th><th scope=col>tneg</th><th scope=col>cpos</th><th scope=col>cneg</th><th scope=col>ablat</th><th scope=col>alloc</th><th scope=col>yi</th><th scope=col>vi</th><th scope=col>ablat_gr</th><th scope=col>ablat_gr2</th></tr></thead>
+<caption>A escalc: 6 × 13</caption>
+<thead>
+	<tr><th scope=col>trial</th><th scope=col>author</th><th scope=col>year</th><th scope=col>tpos</th><th scope=col>tneg</th><th scope=col>cpos</th><th scope=col>cneg</th><th scope=col>ablat</th><th scope=col>alloc</th><th scope=col>yi</th><th scope=col>vi</th><th scope=col>ablat_gr</th><th scope=col>ablat_gr2</th></tr>
+	<tr><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;fct&gt;</th></tr>
+</thead>
 <tbody>
-	<tr><td>1                   </td><td>Aronson             </td><td>1948                </td><td>  4                 </td><td>  119               </td><td> 11                 </td><td>  128               </td><td>44                  </td><td>random              </td><td>-0.8893113          </td><td>0.325584765         </td><td>[34,90)             </td><td>[34,90)             </td></tr>
-	<tr><td>2                                                               </td><td><span style=white-space:pre-wrap>Ferguson &amp; Simes    </span></td><td>1949                                                            </td><td><span style=white-space:pre-wrap>  6</span>                     </td><td><span style=white-space:pre-wrap>  300</span>                   </td><td> 29                                                             </td><td><span style=white-space:pre-wrap>  274</span>                   </td><td>55                                                              </td><td><span style=white-space:pre-wrap>random   </span>               </td><td>-1.5853887                                                      </td><td>0.194581121                                                     </td><td>[34,90)                                                         </td><td>[34,90)                                                         </td></tr>
-	<tr><td>3                   </td><td>Rosenthal et al     </td><td>1960                </td><td>  3                 </td><td>  228               </td><td> 11                 </td><td>  209               </td><td>42                  </td><td>random              </td><td>-1.3480731          </td><td>0.415367965         </td><td>[34,90)             </td><td>[34,90)             </td></tr>
-	<tr><td>4                                                               </td><td><span style=white-space:pre-wrap>Hart &amp; Sutherland   </span></td><td>1977                                                            </td><td> 62                                                             </td><td>13536                                                           </td><td>248                                                             </td><td>12619                                                           </td><td>52                                                              </td><td><span style=white-space:pre-wrap>random   </span>               </td><td>-1.4415512                                                      </td><td>0.020010032                                                     </td><td>[34,90)                                                         </td><td>[34,90)                                                         </td></tr>
-	<tr><td>5                   </td><td>Frimodt-Moller et al</td><td>1973                </td><td> 33                 </td><td> 5036               </td><td> 47                 </td><td> 5761               </td><td>13                  </td><td>alternate           </td><td>-0.2175473          </td><td>0.051210172         </td><td>[0,34)              </td><td>[0,34)              </td></tr>
-	<tr><td>6                                                               </td><td><span style=white-space:pre-wrap>Stein &amp; Aronson     </span></td><td>1953                                                            </td><td>180                                                             </td><td> 1361                                                           </td><td>372                                                             </td><td> 1079                                                           </td><td>44                                                              </td><td>alternate                                                       </td><td>-0.7861156                                                      </td><td>0.006905618                                                     </td><td>[34,90)                                                         </td><td>[34,90)                                                         </td></tr>
+	<tr><td>1</td><td>Aronson             </td><td>1948</td><td>  4</td><td>  119</td><td> 11</td><td>  128</td><td>44</td><td>random   </td><td>-0.8893113</td><td>0.325584765</td><td>[34,90)</td><td>[34,90)</td></tr>
+	<tr><td>2</td><td><span style=white-space:pre-wrap>Ferguson &amp; Simes    </span></td><td>1949</td><td><span style=white-space:pre-wrap>  6</span></td><td><span style=white-space:pre-wrap>  300</span></td><td> 29</td><td><span style=white-space:pre-wrap>  274</span></td><td>55</td><td><span style=white-space:pre-wrap>random   </span></td><td>-1.5853887</td><td>0.194581121</td><td>[34,90)</td><td>[34,90)</td></tr>
+	<tr><td>3</td><td>Rosenthal et al     </td><td>1960</td><td>  3</td><td>  228</td><td> 11</td><td>  209</td><td>42</td><td>random   </td><td>-1.3480731</td><td>0.415367965</td><td>[34,90)</td><td>[34,90)</td></tr>
+	<tr><td>4</td><td><span style=white-space:pre-wrap>Hart &amp; Sutherland   </span></td><td>1977</td><td> 62</td><td>13536</td><td>248</td><td>12619</td><td>52</td><td><span style=white-space:pre-wrap>random   </span></td><td>-1.4415512</td><td>0.020010032</td><td>[34,90)</td><td>[34,90)</td></tr>
+	<tr><td>5</td><td>Frimodt-Moller et al</td><td>1973</td><td> 33</td><td> 5036</td><td> 47</td><td> 5761</td><td>13</td><td>alternate</td><td>-0.2175473</td><td>0.051210172</td><td>[0,34) </td><td>[0,34) </td></tr>
+	<tr><td>6</td><td><span style=white-space:pre-wrap>Stein &amp; Aronson     </span></td><td>1953</td><td>180</td><td> 1361</td><td>372</td><td> 1079</td><td>44</td><td>alternate</td><td>-0.7861156</td><td>0.006905618</td><td>[34,90)</td><td>[34,90)</td></tr>
 </tbody>
 </table>
 
@@ -14360,7 +14395,7 @@ Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">mdl_grouped</span> <span class="o">&lt;-</span> <span class="nf">rma</span><span class="p">(</span><span class="n">yi</span> <span class="o">~</span> <span class="n">ablat_gr2</span><span class="p">,</span> <span class="n">vi</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">dat.bcg</span><span class="p">,</span> <span class="n">digits</span> <span class="o">=</span> <span class="m">3</span><span class="p">)</span>
@@ -14386,8 +14421,8 @@ Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&
 <pre>
 Mixed-Effects Model (k = 13; tau^2 estimator: REML)
 
-  logLik  deviance       AIC       BIC      AICc  
-  -7.073    14.146    20.146    21.339    23.574  
+  logLik  deviance       AIC       BIC      AICc 
+  -7.073    14.146    20.146    21.339    23.574   
 
 tau^2 (estimated amount of residual heterogeneity):     0.084 (SE = 0.063)
 tau (square root of estimated tau^2 value):             0.289
@@ -14395,20 +14430,20 @@ I^2 (residual heterogeneity / unaccounted variability): 70.82%
 H^2 (unaccounted variability / sampling variability):   3.43
 R^2 (amount of heterogeneity accounted for):            73.31%
 
-Test for Residual Heterogeneity: 
+Test for Residual Heterogeneity:
 QE(df = 11) = 41.789, p-val &lt; .001
 
-Test of Moderators (coefficient(s) 2): 
+Test of Moderators (coefficient 2):
 QM(df = 1) = 17.145, p-val &lt; .001
 
 Model Results:
 
-                 estimate     se    zval   pval   ci.lb   ci.ub     
-intrcpt            -1.194  0.169  -7.075  &lt;.001  -1.524  -0.863  ***
-ablat_gr2[0,34)     0.920  0.222   4.141  &lt;.001   0.485   1.356  ***
+                 estimate     se    zval   pval   ci.lb   ci.ub 
+intrcpt            -1.194  0.169  -7.075  &lt;.001  -1.524  -0.863  *** 
+ablat_gr2[0,34)     0.920  0.222   4.141  &lt;.001   0.485   1.356  *** 
 
 ---
-Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1 
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 </pre>
 </div>
 
@@ -14437,7 +14472,7 @@ Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## Solution.</span>
@@ -14470,28 +14505,28 @@ Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&
 <pre>
 Mixed-Effects Model (k = 13; tau^2 estimator: REML)
 
-  logLik  deviance       AIC       BIC      AICc  
-  -7.073    14.146    20.146    21.339    23.574  
+  logLik  deviance       AIC       BIC      AICc 
+  -7.073    14.146    20.146    21.339    23.574   
 
 tau^2 (estimated amount of residual heterogeneity):     0.084 (SE = 0.063)
 tau (square root of estimated tau^2 value):             0.289
 I^2 (residual heterogeneity / unaccounted variability): 70.82%
 H^2 (unaccounted variability / sampling variability):   3.43
 
-Test for Residual Heterogeneity: 
+Test for Residual Heterogeneity:
 QE(df = 11) = 41.789, p-val &lt; .001
 
-Test of Moderators (coefficient(s) 1:2): 
+Test of Moderators (coefficients 1:2):
 QM(df = 2) = 53.612, p-val &lt; .001
 
 Model Results:
 
-                 estimate     se    zval   pval   ci.lb   ci.ub     
-ablat_gr[0,34)     -0.273  0.145  -1.887  0.059  -0.557   0.011    .
-ablat_gr[34,90)    -1.194  0.169  -7.075  &lt;.001  -1.524  -0.863  ***
+                 estimate     se    zval   pval   ci.lb   ci.ub 
+ablat_gr[0,34)     -0.273  0.145  -1.887  0.059  -0.557   0.011    . 
+ablat_gr[34,90)    -1.194  0.169  -7.075  &lt;.001  -1.524  -0.863  *** 
 
 ---
-Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1 
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 </pre>
 </div>
 
